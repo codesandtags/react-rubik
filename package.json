@@ -1,0 +1,59 @@
+{
+  "name": "react-rubik",
+  "version": "1.0.0",
+  "description": "React Rubik is a small project with a big purpose. Create a set of useful components for future React Projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesandtags/react-rubik.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "redux",
+    "ava",
+    "babel",
+    "eslint",
+    "susy"
+  ],
+  "author": "codesandtags",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codesandtags/react-rubik/issues"
+  },
+  "homepage": "https://github.com/codesandtags/react-rubik#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "ava": "^0.18.2",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-react-app": "^2.2.0",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.17.1",
+    "eslint-config-react-app": "^0.6.2",
+    "eslint-loader": "^1.6.3",
+    "node-sass": "^4.5.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "react-app",
+      "es2015"
+    ]
+  }
+}
