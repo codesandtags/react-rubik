@@ -4,11 +4,13 @@
   "description": "React Rubik is a small project with a big purpose. Create a set of useful components for future React Projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config config/webpack.config.babel.js",
+    "build:prd": "webpack -p --config config/webpack.config.babel.js",
+    "build": "webpack --config config/webpack.config.babel.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codesandtags/react-rubik.git"
+    "url": "https://github.com/codesandtags/react-rubik.git"
   },
   "keywords": [
     "react",
@@ -27,6 +29,7 @@
   "homepage": "https://github.com/codesandtags/react-rubik#readme",
   "dependencies": {
     "babel": "^6.23.0",
+    "object-assign": "^4.1.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
@@ -35,15 +38,25 @@
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "ava": "^0.18.2",
+    "babel-cli": "^6.24.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.4.0",
+    "babel-preset-latest": "^6.24.0",
     "babel-preset-react-app": "^2.2.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "css-loader": "0.26.1",
     "enzyme": "^2.7.1",
     "eslint": "^3.17.1",
     "eslint-config-react-app": "^0.6.2",
     "eslint-loader": "^1.6.3",
+    "file-loader": "0.9.0",
+    "json-loader": "0.5.4",
     "node-sass": "^4.5.0",
+    "postcss-loader": "1.2.1",
+    "sass-loader": "6.0.2",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   },
@@ -52,8 +65,36 @@
   },
   "babel": {
     "presets": [
-      "react-app",
-      "es2015"
-    ]
+      "react",
+      "stage-1"
+    ],
+    "env": {
+      "development": {
+        "presets": [
+          "latest"
+        ]
+      },
+      "production": {
+        "presets": [
+          [
+            "latest",
+            {
+              "es2015": {
+                "modules": false
+              }
+            }
+          ]
+        ],
+        "plugins": [
+          "transform-react-constant-elements",
+          "transform-react-remove-prop-types"
+        ]
+      },
+      "test": {
+        "presets": [
+          "latest"
+        ]
+      }
+    }
   }
 }
