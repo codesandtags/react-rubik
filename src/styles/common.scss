@@ -1,0 +1,24 @@
+/**
+ Palettes from here :
+  http://www.colourlovers.com/palette/58881/FlashDen
+  http://www.colourlovers.com/palette/27905/threadless
+ */
+$color-light-blue: #9CC4E4;
+$color-dark-blue: #1B325F;
+$color-blue: #3A89C9;
+$color-orange: #F26C4F;
+$color-white: #EFEFEF;
+$color-black: #111111;
+$color-gray: #AAAAAA;
+
+/**
+ Susy configuration
+*/
+@import "~susy/sass/susy";
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);

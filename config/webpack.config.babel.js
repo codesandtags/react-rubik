@@ -14,7 +14,7 @@ export default {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist'), // Note: Physical files are only output by the production build task `npm run build`.
-    publicPath: '/'
+    publicPath: 'http://localhost:8080/'
   },
   devServer: {
     contentBase: path.resolve(__dirname, '../src'),  // New
@@ -55,7 +55,7 @@ export default {
       },
       {
         test: /(\.css|\.scss|\.sass)$/,
-        use: ['style-loader', 'css-loader?sourceMap', 'postcss-loader', 'sass-loader?sourceMap']
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       }
     ]
   },

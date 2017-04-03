@@ -1,3 +1,17 @@
-import './styles/main.scss';
+/**
+ * This is the entry file of the application
+ */
+// Dependencies
+import React from "react";
+import ReactDOM from "react-dom";
+// Containers & Components
+import App from "./container/App";
+// Styles
+import "./styles/main.scss";
 
-console.log('Hi');
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
+
+console.log('The app has rendered correctly!');
