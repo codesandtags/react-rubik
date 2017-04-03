@@ -23,6 +23,7 @@ export default class ComponentList extends React.Component {
           <h2>Counter</h2>
           <Counter startNumber="5"/>
           <Counter startNumber="250" iconText="❤️"/>
+          <Counter iconText="🐶"/>
           <h3>Code</h3>
           <pre>
               <code className="hljs html">
