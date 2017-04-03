@@ -10,6 +10,7 @@ $color-orange: #F26C4F;
 $color-white: #EFEFEF;
 $color-black: #111111;
 $color-gray: #AAAAAA;
+$color-beige: #F1ECDF;
 
 /**
  Susy configuration
@@ -22,3 +23,11 @@ $susy: (
   output: float,
   gutter-position: inside,
 );
+
+/**
+ Fonts
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+

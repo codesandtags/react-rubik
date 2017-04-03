@@ -1,7 +1,5 @@
 @import "common";
 @import "normalize";
-@import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 * {
   border: 0px solid red;
@@ -19,6 +17,8 @@ header {
   display: flex;
   text-align: center;
   flex: 1;
+  background: $color-white;
+  width: 100%;
 
   .logo {
     flex: 1;
@@ -27,7 +27,7 @@ header {
   }
 
   h1 {
-    color: $color-dark-blue;
+    color: $color-black;
     flex: 1;
     font-family: 'Press Start 2P';
     font-size: 3em;
@@ -49,11 +49,15 @@ main {
 }
 
 nav {
-  flex: 1
+  flex: 3;
+  background: $color-beige;
+  border: 1px solid $color-gray;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
 }
 
 section {
-  flex: 4
+  flex: 10
 }
 
 .container {

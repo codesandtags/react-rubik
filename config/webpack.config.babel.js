@@ -46,6 +46,10 @@ export default {
         use: ['url-loader?limit=10000&mimetype=image/svg+xml']
       },
       {
+        test: /\.mp3$/,
+        use: ['url-loader']
+      },
+      {
         test: /\.(jpe?g|png|gif)$/i,
         use: ['file-loader?name=[name].[ext]']
       },

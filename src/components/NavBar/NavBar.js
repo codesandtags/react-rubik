@@ -4,11 +4,14 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <nav>
-        <ul>
-          <li>uno</li>
-          <li>dos</li>
-          <li>tres</li>
-        </ul>
+        <ol>
+          <li>What is React Rubik?</li>
+          <li>Components
+            <ul>
+              <li><a href="#">Counter</a></li>
+            </ul>
+          </li>
+        </ol>
       </nav>
     );
   }

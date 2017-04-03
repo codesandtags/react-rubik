@@ -9,7 +9,7 @@ export default class ComponentList extends React.Component {
     return (
       <section>
         <Counter startNumber="5"/>
-        <Counter startNumber="250"/>
+        <Counter startNumber="250" iconText="❤️"/>
       </section>
     )
   }

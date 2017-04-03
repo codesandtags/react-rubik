@@ -8,20 +8,23 @@
   flex-direction: row;
 
   span {
-    flex: 2;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
     padding-left: 10px;
     text-align: right;
+    transition: all .2s ease-in-out;
+
+    &.grow {
+      transform: scale(3);
+    }
   }
 
   button {
-    flex: 1;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
-    border: 1px solid $color-orange;
     border-radius: 5px;
     background: $color-white;
     cursor: pointer;
+    width: 40px;
   }
 }
