@@ -14,14 +14,12 @@ export default class PieChart extends React.Component {
     GoogleChartsLoader
       .getLoader()
       .then(() => {
-        debugger;
         google.charts.setOnLoadCallback(this.drawPieChart());
       });
   }
 
   drawPieChart() {
     // Create the data table.
-    debugger;
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Topping');
     data.addColumn('number', 'Slices');
@@ -43,7 +41,6 @@ export default class PieChart extends React.Component {
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById(this.props.name));
     chart.draw(data, options);
-    debugger;
   }
 
   render() {

@@ -13,7 +13,6 @@ const GoogleChartsLoader = {
             window.google.charts.load('current', {'packages': ['corechart']});
             window.google.charts.setOnLoadCallback(() => {
               console.log('Chart Loaded with Google Visualization');
-              debugger;
               resolve();
             });
           }

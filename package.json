@@ -4,7 +4,7 @@
   "description": "React Rubik is a small project with a big purpose. Create a set of useful components for future React Projects.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config config/webpack.config.babel.js",
+    "start": "webpack-dev-server --config config/webpack.config.babel.js --open",
     "build:prd": "webpack -p --config config/webpack.config.babel.js",
     "build": "webpack --config config/webpack.config.babel.js"
   },
@@ -30,8 +30,8 @@
   "dependencies": {
     "babel": "^6.23.0",
     "object-assign": "^4.1.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0"
   },
@@ -42,9 +42,8 @@
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "v7.0.0-alpha.2",
-    "babel-preset-latest": "^6.24.0",
-    "babel-preset-react-app": "^2.2.0",
-    "babel-preset-stage-1": "^6.22.0",
+    "babel-preset-env": "^1.3.3",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "0.26.1",
     "enzyme": "^2.7.1",
     "eslint": "^3.17.1",
@@ -52,6 +51,7 @@
     "eslint-loader": "^1.6.3",
     "file-loader": "0.9.0",
     "highlightjs": "^9.10.0",
+    "html-webpack-plugin": "^2.28.0",
     "json-loader": "0.5.4",
     "loadjs": "^3.5.0",
     "node-sass": "^4.5.0",
@@ -61,44 +61,16 @@
     "style-loader": "0.13.1",
     "susy": "^2.2.12",
     "url-loader": "0.5.7",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "babel": {
     "presets": [
-      "react",
-      "stage-1"
-    ],
-    "env": {
-      "development": {
-        "presets": [
-          "latest"
-        ]
-      },
-      "production": {
-        "presets": [
-          [
-            "latest",
-            {
-              "es2015": {
-                "modules": false
-              }
-            }
-          ]
-        ],
-        "plugins": [
-          "transform-react-constant-elements",
-          "transform-react-remove-prop-types"
-        ]
-      },
-      "test": {
-        "presets": [
-          "latest"
-        ]
-      }
-    }
+      "env",
+      "react"
+    ]
   }
 }

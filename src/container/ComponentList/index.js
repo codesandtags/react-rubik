@@ -39,7 +39,6 @@ export default class ComponentList extends React.Component {
         <article>
           <h3>Pie Chart</h3>
           <PieChart name="pie1"/>
-          <PieChart name="pie2"/>
           <h4>Code</h4>
           <pre>
               <code className="hljs html">

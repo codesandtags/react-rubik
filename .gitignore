@@ -31,3 +31,4 @@ jspm_packages
 dist
 .idea
 
+.yarnclean
