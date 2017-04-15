@@ -2,7 +2,7 @@
 import React from "react";
 // Components
 import Counter from "./../../components/Counter/Counter";
-import PieChart from "./../../components/PieChart/PieChart";
+import Gallery from "./../../components/Gallery";
 // JS Libraries
 import hljs from "highlightjs/highlight.pack.min";
 // Styles
@@ -23,6 +23,25 @@ export default class ComponentList extends React.Component {
         <h2>Components</h2>
 
         <article>
+          <h3>Gallery</h3>
+          <Gallery images={
+            [{title: 'one', url: 'https://unsplash.it/300/300?image=23', description: 'image one'},
+              {title: 'two', url: 'https://unsplash.it/300/300?image=50', description: 'image two'},
+              {title: 'three', url: 'https://unsplash.it/300/300?image=30', description: 'image three'},
+              {title: 'four', url: 'https://unsplash.it/300/300?image=876', description: 'image four'},
+              {title: 'five', url: 'https://unsplash.it/300/300?image=102', description: 'image five'},
+              {title: 'six', url: 'https://unsplash.it/300/300?image=415', description: 'image six'}
+            ]
+          }/>
+          <h4>Code</h4>
+          <pre>
+              <code className="hljs html">
+                &lt;Gallery images='list of object images' /&gt;
+              </code>
+          </pre>
+        </article>
+
+        <article>
           <h3>Counter</h3>
           <Counter startNumber="5"/>
           <Counter startNumber="250" iconText="❤️"/>
@@ -32,17 +51,6 @@ export default class ComponentList extends React.Component {
               <code className="hljs html">
                 &lt;Counter startNumber=&quot;5&quot;/&gt;<br/>
                 &lt;Counter startNumber=&quot;250&quot; iconText=&quot;❤️&quot;/&gt;
-              </code>
-          </pre>
-        </article>
-
-        <article>
-          <h3>Pie Chart</h3>
-          <PieChart name="pie1"/>
-          <h4>Code</h4>
-          <pre>
-              <code className="hljs html">
-                // TODO
               </code>
           </pre>
         </article>
