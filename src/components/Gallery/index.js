@@ -1,5 +1,8 @@
+// Dependencies
 import React from "react";
+import PropTypes from "prop-types";
 import Photo from "./Photo";
+// Styles
 import "./gallery.scss";
 
 export default class Gallery extends React.Component {
@@ -17,3 +20,11 @@ export default class Gallery extends React.Component {
     );
   }
 }
+
+Gallery.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
+  }))
+};

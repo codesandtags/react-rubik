@@ -12,7 +12,6 @@ export default class ComponentList extends React.Component {
   componentDidMount() {
     const $blocks = document.querySelectorAll('pre code');
     $blocks.forEach((block) => {
-      console.log(block);
       hljs.highlightBlock(block);
     });
   }
