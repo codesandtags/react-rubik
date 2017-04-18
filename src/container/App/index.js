@@ -3,7 +3,7 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Switch
 } from 'react-router-dom';
 // Components
 import NavBar from "./../../components/NavBar";
@@ -22,8 +22,13 @@ class App extends React.Component {
           <main>
             <NavBar />
             <section>
-              <Route exact path="/" component={Home}/>
-              <Route path="/components" component={ComponentList}/>
+              <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/components" component={ComponentList}/>
+                <Route render={() => (
+                  <h2>404 - Page not found</h2>
+                )}/>
+              </Switch>
             </section>
           </main>
           <Footer description="React Rubik" year="2018"/>

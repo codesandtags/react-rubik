@@ -18,7 +18,8 @@ export default {
     publicPath: '/'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, '../src'),  // New
+    contentBase: path.resolve(__dirname, '../src'),
+    historyApiFallback: true
   },
   module: {
     rules: [
