@@ -20,9 +20,8 @@ export default class ComponentList extends React.Component {
     return (
       <section>
         <h2>Components</h2>
-
         <article>
-          <h3>Gallery</h3>
+          <h3><a name="gallery">Gallery</a></h3>
           <Gallery images={
             [{title: 'one', url: 'https://unsplash.it/300/300?image=23', description: 'image one'},
               {title: 'two', url: 'https://unsplash.it/300/300?image=50', description: 'image two'},
@@ -41,7 +40,7 @@ export default class ComponentList extends React.Component {
         </article>
 
         <article>
-          <h3>Counter</h3>
+          <h3><a name="counter">Counter</a></h3>
           <Counter startNumber="5"/>
           <Counter startNumber="250" iconText="❤️"/>
           <Counter iconText="🐶"/>
