@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.config.babel.js --open",
-    "build:prd": "webpack -p --config config/webpack.config.babel.js",
+    "build:prd": "NODE_ENV='production' webpack -p --config config/webpack.config.babel.js",
     "build": "webpack --config config/webpack.config.babel.js"
   },
   "repository": {
